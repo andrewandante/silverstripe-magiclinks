@@ -10,4 +10,4 @@ Name: magiclinks-routes
 ---
 SilverStripe\Control\Director:
   rules:
-    'magiclink/$Hash':'AndrewAndante\MagicLinks\Controller\MagicLinkController'
+    'magiclink': 'AndrewAndante\MagicLinks\Controller\MagicLinkController'

@@ -3,6 +3,7 @@
 namespace AndrewAndante\MagicLinks\Extension;
 
 use AndrewAndante\MagicLinks\Controller\MagicLinkController;
+use AndrewAndante\MagicLinks\Field\MagicLinkField;
 use AndrewAndante\MagicLinks\Model\MagicLink;
 use SilverStripe\Control\Controller;
 use SilverStripe\ORM\DataExtension;
@@ -43,5 +44,14 @@ class MagicLinkExtension extends DataExtension
     }
 
     return $this->getOwner()->canView($member);
+  }
+
+  public function updateCMSFields($fieldList)
+  {
+    $fieldList->addFieldToTab('Root.Main',
+      MagicLinkField::create('MagicLinkID', 'Magic Link'),
+      'MenuTitle');
+
+    return $fieldList;
   }
 }
