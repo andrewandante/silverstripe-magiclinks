@@ -3,3 +3,11 @@ Name: magiclinks
 ---
 AndrewAndante\MagicLinks\Model\MagicLink:
   expiry_minutes: 60
+  hash_length: 64
+  hash_generation_retries: 10
+---
+Name: magiclinks-routes
+---
+SilverStripe\Control\Director:
+  rules:
+    'magiclink/$Hash':'AndrewAndante\MagicLinks\Controller\MagicLinkController'

@@ -10,7 +10,7 @@ class MagicLinkController extends Controller
   
   public function index()
   {
-    $hash = $this->getRequest()->param('ID');
+    $hash = $this->getRequest()->param('Hash');
 
     $magicLink = MagicLink::get()->filter([
       'Hash' => $hash
@@ -23,7 +23,5 @@ class MagicLinkController extends Controller
     ) {
       return $magicLink->Target();
     }
-    
-    
   }
 }
