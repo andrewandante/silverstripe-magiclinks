@@ -6,10 +6,6 @@
   "require": {
     "silverstripe/framework": "^4"
   },
-  "require-dev": {
-    "phpunit/phpunit": "^5.7",
-    "silverleague/ideannotator": "3.x-dev"
-  },
   "autoload": {
     "psr-4": {
       "AndrewAndante\\MagicLinks\\": "code/"

@@ -1,0 +1,5 @@
+---
+Name: magiclinks
+---
+AndrewAndante\MagicLinks\Model\MagicLink:
+  expiry_minutes: 60

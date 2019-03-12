@@ -11,14 +11,20 @@ use SilverStripe\ORM\FieldType\DBVarchar;
  *
  * @package AndrewAndante\MagicLinks
  *
- * @
+ * @property string $Hash
+ * @property DBDatetime $Expiry
+ * @method DataObject Target()
+ * @method DBDatetime getExpiry()
+ * @method MagicLink setExpiry()
+ * @method string getHash()
+ * @method MagicLink setHash()
  */
 class MagicLink extends DataObject
 {
   /**
    * @var int
    */
-  private $expiry_minutes = 60;
+  private $expiry_minutes;
 
   /**
    * @var string
