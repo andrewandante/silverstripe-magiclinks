@@ -12,6 +12,11 @@ class MagicLinkController extends Controller
   {
     $hash = $this->getRequest()->param('Hash');
 
+    if (empty($hash)) {
+      return $this->getResponse()
+        ->setStatusCode(400);
+    }
+
     $magicLink = MagicLink::get()->filter([
       'Hash' => $hash
     ])->first();
@@ -23,5 +28,7 @@ class MagicLinkController extends Controller
     ) {
       return $magicLink->Target();
     }
+
+    return $this->getResponse()->setStatusCode(404);
   }
 }
